@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách trong CSS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        h2 {
+            color: #0066cc;
+            margin-top: 30px;
+        }
+
+        /* =========================
+           1. LIST-STYLE-TYPE
+           ========================= */
+
+        .disc {
+            list-style-type: disc;
+        }
+
+        .circle {
+            list-style-type: circle;
+        }
+
+        .square {
+            list-style-type: square;
+        }
+
+        .decimal {
+            list-style-type: decimal;
+        }
+
+        .lower-alpha {
+            list-style-type: lower-alpha;
+        }
+
+
+        /* =========================
+           2. LIST-STYLE-IMAGE
+           ========================= */
+
+        .image-list {
+            list-style-image: url("https://cdn-icons-png.flaticon.com/16/190/190411.png");
+        }
+
+
+        /* =========================
+           3. LIST-STYLE-POSITION
+           ========================= */
+
+        .inside {
+            list-style-position: inside;
+            background-color: #e8f4ff;
+            padding: 10px;
+        }
+
+        .outside {
+            list-style-position: outside;
+            background-color: #fff3e0;
+            padding: 10px;
+        }
+
+
+        /* =========================
+           4. LIST-STYLE - THUỘC TÍNH RÚT GỌN
+           ========================= */
+
+        .short-list {
+            list-style: square inside;
+        }
+
+
+        /* =========================
+           5. DANH SÁCH CÓ MÀU SẮC
+           ========================= */
+
+        .color-list {
+            background-color: #222;
+            padding: 20px 40px;
+            width: 400px;
+
+            /* Màu của toàn bộ danh sách */
+            color: #ffffff;
+        }
+
+        .color-list li {
+            padding: 8px;
+            margin: 5px 0;
+            background-color: #444;
+            color: #66ff99;
+        }
+
+        .color-list li:nth-child(2) {
+            color: #ffcc00;
+        }
+
+        .color-list li:nth-child(3) {
+            color: #ff6699;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Thực hành Danh sách trong CSS</h1>
+
+
+    <!-- 1. LIST-STYLE-TYPE -->
+    <h2>1. list-style-type</h2>
+
+    <h3>Danh sách không có thứ tự</h3>
+
+    <ul class="disc">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <ul class="circle">
+        <li>Google Chrome</li>
+        <li>Microsoft Edge</li>
+        <li>Firefox</li>
+    </ul>
+
+    <ul class="square">
+        <li>Hà Nội</li>
+        <li>Đà Nẵng</li>
+        <li>TP. Hồ Chí Minh</li>
+    </ul>
+
+
+    <h3>Danh sách có thứ tự</h3>
+
+    <ol class="decimal">
+        <li>Bước 1: Học HTML</li>
+        <li>Bước 2: Học CSS</li>
+        <li>Bước 3: Học JavaScript</li>
+    </ol>
+
+    <ol class="lower-alpha">
+        <li>Sản phẩm</li>
+        <li>Giá</li>
+        <li>Số lượng</li>
+    </ol>
+
+
+    <!-- 2. LIST-STYLE-IMAGE -->
+    <h2>2. list-style-image</h2>
+
+    <ul class="image-list">
+        <li>Thiết kế giao diện</li>
+        <li>Lập trình website</li>
+        <li>Kiểm tra website</li>
+    </ul>
+
+
+    <!-- 3. LIST-STYLE-POSITION -->
+    <h2>3. list-style-position</h2>
+
+    <h3>Inside</h3>
+
+    <ul class="inside">
+        <li>
+            Đây là một mục danh sách sử dụng
+            list-style-position: inside.
+        </li>
+        <li>
+            Nội dung của mục nằm cùng vị trí với dấu đánh dấu.
+        </li>
+    </ul>
+
+
+    <h3>Outside</h3>
+
+    <ul class="outside">
+        <li>
+            Đây là một mục danh sách sử dụng
+            list-style-position: outside.
+        </li>
+        <li>
+            Dấu đánh dấu nằm bên ngoài nội dung.
+        </li>
+    </ul>
+
+
+    <!-- 4. LIST-STYLE -->
+    <h2>4. Thuộc tính rút gọn list-style</h2>
+
+    <ul class="short-list">
+        <li>Trang chủ</li>
+        <li>Giới thiệu</li>
+        <li>Sản phẩm</li>
+        <li>Liên hệ</li>
+    </ul>
+
+
+    <!-- 5. MÀU SẮC -->
+    <h2>5. Danh sách với màu sắc</h2>
+
+    <ul class="color-list">
+        <li>Sản phẩm 1</li>
+        <li>Sản phẩm 2</li>
+        <li>Sản phẩm 3</li>
+    </ul>
+
+</body>
+</html>
