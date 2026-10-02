@@ -1,0 +1,89 @@
+/* =========================
+   BÀI 5 - BỘ CHỌN CSS
+   ========================= */
+
+/* ---------- Bộ chọn element ---------- */
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #f0f4f8;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+ul {
+    max-width: 420px;
+    margin: 0 auto 30px;
+    padding-left: 25px;
+}
+
+
+/* ---------- Bộ chọn id ---------- */
+#tieude {
+    text-align: center;
+}
+
+
+/* ---------- Bộ chọn class ---------- */
+.gioi-thieu {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-left: 5px solid #4CAF50;
+    border-radius: 8px;
+}
+
+
+/* ---------- Bộ chọn gom nhóm ---------- */
+h1,
+h2 {
+    color: #4CAF50;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+
+/* ---------- Màu sắc khác nhau cho từng mục ---------- */
+.do {
+    color: #E53935;
+}
+
+.vang {
+    color: #FB8C00;
+}
+
+.xanh {
+    color: #1E88E5;
+}
+
+
+/* ---------- Bộ chọn giả (pseudo-classes) ---------- */
+.so-thich li:hover {
+    color: #4CAF50;
+    cursor: pointer;
+}
+
+.nut {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 30px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nut:hover {
+    background-color: #2196F3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.nut:active {
+    background-color: #1769aa;
+    transform: translateY(0);
+}
