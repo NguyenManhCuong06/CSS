@@ -1,0 +1,23 @@
+/* =========================
+   EXTERNAL STYLE - BÀI 4
+   ========================= */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+p {
+    color: #2196F3;
+    font-size: 18px;
+}
+
+strong {
+    color: #E91E63;
+}
