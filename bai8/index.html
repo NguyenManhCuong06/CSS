@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8 - Sử dụng Box Model 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Mô hình hộp CSS (Box Model)</h1>
+
+    <p class="huong-dan">
+        Nhấn F12 &rarr; tab <strong>Computed</strong> để so sánh tổng chiều rộng và
+        chiều cao của thẻ dùng <em>content-box</em> với <em>border-box</em>.
+    </p>
+
+    <div class="card">
+        Thẻ 1 — <strong>content-box</strong>: tổng kích thước lớn hơn vì padding
+        và border được cộng thêm vào bên ngoài.
+    </div>
+
+    <div class="card">
+        Thẻ 2 — <strong>border-box</strong>: tổng kích thước đúng bằng 280px ×
+        150px vì padding và border nằm trong kích thước đã khai báo.
+    </div>
+
+    <div class="card">
+        Thẻ 3 — <strong>border-box</strong>: cùng cách tính với thẻ 2, chỉ khác màu
+        nền để dễ so sánh trực quan.
+    </div>
+
+</body>
+
+</html>
