@@ -1,0 +1,69 @@
+/* =========================
+   BÀI 6 - MÀU NỀN & ẢNH NỀN
+   ========================= */
+
+/* ---------- Màu nền trang web ---------- */
+body {
+    margin: 0;
+    padding: 40px 20px;
+    background-color: #eef2f7;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+h1 {
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.mo-ta {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #555;
+    font-size: 17px;
+}
+
+
+/* ---------- Khối có ảnh nền ---------- */
+.khoidien {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 30px;
+
+    /* ảnh nền */
+    background-image: url("background.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+    /* màu nền dự phòng nếu ảnh không tải được */
+    background-color: #2a5298;
+
+    /* căn giữa nội dung */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 300px;
+
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.khoidien h2 {
+    margin-top: 0;
+    color: #ffd54f;
+}
+
+.khoidien p {
+    max-width: 600px;
+    margin-bottom: 0;
+}
+
+.khoidien strong {
+    color: #ffd54f;
+}
