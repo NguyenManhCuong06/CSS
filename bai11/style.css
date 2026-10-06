@@ -1,0 +1,54 @@
+/* =========================
+   BÀI 11 - MENU DỌC
+   ========================= */
+
+/* ---------- Đặt lại mặc định ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+#menu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#menu ul li {
+    position: relative;
+    width: 160px;
+    height: 40px;
+    padding: 0 20px;
+    background-color: #000;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+}
+
+
+/* ---------- Hiệu ứng hover ---------- */
+#menu ul li:hover {
+    background-color: #555;
+}
+
+
+/* ---------- Danh sách con ẩn mặc định ---------- */
+#menu ul li ul {
+    position: absolute;
+    top: 0;
+    left: 160px;
+    visibility: hidden;
+}
+
+
+/* ---------- Hiện danh sách con khi hover ---------- */
+#menu ul li:hover ul {
+    visibility: visible;
+}
