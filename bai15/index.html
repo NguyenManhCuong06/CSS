@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 15 - Xem Hoạt Hình Trực Tuyến</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header cố định -->
+    <header class="main-header">
+        <div class="logo">
+            <img src="https://via.placeholder.com/120x40/4CAF50/ffffff?text=HoTo+" alt="Logo">
+        </div>
+        <nav class="head-links">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Phim hoạt hình</a></li>
+                <li><a href="#">Tìm kiếm</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Nội dung chính -->
+    <div class="container">
+
+        <!-- Menu danh sách video -->
+        <aside class="left-content">
+            <h3>Danh sách phim</h3>
+            <ul class="video-list">
+                <li class="active">
+                    <a href="#" data-video="video1" data-type="video">
+                        <span class="video-title">Big Buck Bunny</span>
+                        <span class="video-meta">720p • 10 phút</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-video="video2" data-type="iframe" data-src="https://www.youtube.com/embed/dQw4w9WgXcQ">
+                        <span class="video-title">Video mẫu YouTube</span>
+                        <span class="video-meta">1080p • 3 phút</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-video="video3" data-type="video">
+                        <span class="video-title">Elephant Dream</span>
+                        <span class="video-meta">720p • 11 phút</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-video="video4" data-type="video">
+                        <span class="video-title">Sintel</span>
+                        <span class="video-meta">1080p • 15 phút</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-video="video5" data-type="video">
+                        <span class="video-title">Tears of Steel</span>
+                        <span class="video-meta">1080p • 12 phút</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Khu vực xem video -->
+        <main class="right-content">
+            <div class="video-wrapper">
+                <video id="video1" controls poster="https://via.placeholder.com/800x450/333/ffffff?text=Big+Buck+Bunny">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ video.
+                </video>
+                <iframe id="video2" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="display:none;"></iframe>
+                <video id="video3" controls poster="https://via.placeholder.com/800x450/555/ffffff?text=Elephant+Dream" style="display:none;">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" type="video/mp4">
+                </video>
+                <video id="video4" controls poster="https://via.placeholder.com/800x450/777/ffffff?text=Sintel" style="display:none;">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4" type="video/mp4">
+                </video>
+                <video id="video5" controls poster="https://via.placeholder.com/800x450/999/ffffff?text=Tears+of+Steel" style="display:none;">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-info">
+                <h2 id="current-title">Big Buck Bunny</h2>
+                <p id="current-desc">Phim hoạt hình ngắn nói về một chú thỏ lớn bị ba động vật nhỏ quấy rầy.</p>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <p>&copy; 2026 Trang Xem Hoạt Hình. Bảo lưu mọi quyền.</p>
+    </footer>
+
+    <script>
+        const videoData = {
+            video1: { title: 'Big Buck Bunny', desc: 'Phim hoạt hình ngắn nói về một chú thỏ lớn bị ba động vật nhỏ quấy rầy.' },
+            video2: { title: 'Video mẫu YouTube', desc: 'Video nhúng từ YouTube minh họa khả năng xem trực tuyến.' },
+            video3: { title: 'Elephant Dream', desc: 'Hành trình khám phá thế giới kỳ ảo qua đôi mắt hai nhân vật chính.' },
+            video4: { title: 'Sintel', desc: 'Cô gái tìm kiếm chú rồng con của mình qua những vùng đất hoang vu.' },
+            video5: { title: 'Tears of Steel', desc: 'Tương lai Amsterdam, nhóm anh hùng ngăn chặn cuộc chiến giữa người và robot.' }
+        };
+
+        document.querySelectorAll('.video-list li a').forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const videoId = link.getAttribute('data-video');
+                const type = link.getAttribute('data-type');
+                const iframeSrc = link.getAttribute('data-src') || '';
+
+                document.querySelectorAll('.video-wrapper video, .video-wrapper iframe').forEach(el => el.style.display = 'none');
+                document.querySelectorAll('.video-list li').forEach(li => li.classList.remove('active'));
+
+                if (type === 'iframe') {
+                    document.getElementById(videoId).style.display = 'block';
+                    document.getElementById(videoId).src = iframeSrc;
+                } else {
+                    document.getElementById(videoId).style.display = 'block';
+                }
+
+                link.parentElement.classList.add('active');
+                document.getElementById('current-title').textContent = videoData[videoId].title;
+                document.getElementById('current-desc').textContent = videoData[videoId].desc;
+            });
+        });
+    </script>
+
+</body>
+
+</html>
