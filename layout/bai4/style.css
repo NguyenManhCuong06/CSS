@@ -1,0 +1,188 @@
+/* =========================
+   BÀI 4 - LAYOUT HTML5 + CSS
+   ========================= */
+
+/* ---------- Đặt lại ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* ---------- Header ---------- */
+.main-header {
+    background-color: #333;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.main-header p {
+    margin: 5px 0 0;
+    opacity: 0.8;
+    font-size: 14px;
+}
+
+
+/* ---------- Nav ---------- */
+.main-nav {
+    background-color: #2196F3;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav li {
+    margin: 0;
+}
+
+.main-nav a {
+    display: block;
+    padding: 12px 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: #1976D2;
+}
+
+
+/* ---------- Page Container ---------- */
+.page-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+
+/* ---------- Sidebar chung ---------- */
+.left-sidebar,
+.right-sidebar {
+    width: 200px;
+    flex-shrink: 0;
+    background-color: white;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.left-sidebar h3,
+.right-sidebar h3 {
+    margin: 0 0 15px;
+    font-size: 18px;
+    color: #333;
+    border-bottom: 2px solid #2196F3;
+    padding-bottom: 5px;
+}
+
+.left-sidebar li,
+.right-sidebar li {
+    border-bottom: 1px solid #eee;
+}
+
+.left-sidebar li:last-child,
+.right-sidebar li:last-child {
+    border-bottom: none;
+}
+
+.left-sidebar a,
+.right-sidebar a {
+    display: block;
+    padding: 8px 0;
+    font-size: 14px;
+}
+
+.left-sidebar a:hover,
+.right-sidebar a:hover {
+    color: #2196F3;
+    font-weight: bold;
+}
+
+
+/* ---------- Main Content ---------- */
+.main-content {
+    flex-grow: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.main-content article {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.main-content article:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.main-content h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #333;
+}
+
+.main-content p {
+    margin: 0;
+    font-size: 15px;
+    color: #555;
+}
+
+
+/* ---------- Footer ---------- */
+.main-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+    .page-container {
+        flex-direction: column;
+    }
+
+    .left-sidebar,
+    .right-sidebar {
+        width: 100%;
+    }
+}
