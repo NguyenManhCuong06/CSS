@@ -1,0 +1,81 @@
+/* =========================
+   BÀI 12 - MENU NGANG
+   ========================= */
+
+/* ---------- Đặt lại mặc định ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+#menu {
+    height: 50px;
+    border: 1px solid #ccc;
+    background-color: #333;
+    padding: 0 20px;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu ul li {
+    float: left;
+    position: relative;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 20px;
+    background-color: #000;
+}
+
+#menu ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 50px;
+}
+
+#menu ul li a:hover {
+    background-color: red;
+}
+
+
+/* ---------- Danh sách con ---------- */
+#menu ul ul {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 160px;
+    display: none;
+}
+
+#menu ul ul li {
+    float: none;
+    width: 160px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    background-color: #000;
+}
+
+#menu ul ul li a {
+    line-height: 40px;
+}
+
+#menu ul ul li a:hover {
+    background-color: red;
+}
+
+
+/* ---------- Hiện dropdown khi hover ---------- */
+#menu ul li:hover > ul {
+    display: block;
+}
