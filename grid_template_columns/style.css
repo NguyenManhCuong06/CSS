@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    margin: 30px 0 10px;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.grid-container div {
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-example1 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-example1 div {
+    background-color: lightblue;
+}
+
+.grid-example2 {
+    grid-template-columns: 100px 200px 1fr;
+}
+
+.grid-example2 div {
+    background-color: lightgreen;
+}
