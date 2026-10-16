@@ -1,0 +1,55 @@
+// Biến màu
+$primary-color: #1abc9c;
+$secondary-color: #333;
+$font-stack: Arial, sans-serif;
+
+// Mixin cho nút bấm
+@mixin btn-style($bg, $color) {
+    background-color: $bg;
+    color: $color;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+// Stil cơ bản
+body {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    color: $secondary-color;
+}
+
+.header {
+    background-color: $primary-color;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.btn {
+    @include btn-style($primary-color, white);
+}
+
+.btn-outline {
+    @include btn-style(white, $primary-color);
+    border: 2px solid $primary-color;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    h3 {
+        color: $primary-color;
+    }
+}
