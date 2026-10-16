@@ -1,0 +1,34 @@
+// layout/_grid-content.scss
+.gridcontent {
+    @include grid-item();
+
+    &.full-width {
+        width: 100%;
+        border-right-color: transparent;
+    }
+
+    &.quarter {
+        width: 25%;
+        padding-top: 15px;
+    }
+
+    &.no-border {
+        border: none;
+    }
+
+    &.bg-white {
+        background-color: #ffffff;
+    }
+
+    &.bg-blue {
+        background-color: #33b5e5;
+    }
+
+    &.bg-purple {
+        background-color: #9933cc;
+    }
+
+    &.bg-teal {
+        background-color: #0099cc;
+    }
+}

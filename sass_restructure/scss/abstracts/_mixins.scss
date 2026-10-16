@@ -1,0 +1,17 @@
+// abstracts/_mixins.scss
+// Mixin cho grid item
+@mixin grid-item($width: $gridcontent-width, $bg: $grid-bg-default) {
+    width: $width;
+    margin: $gridcontent-margin;
+    border-right: $grid-border-width solid $border-color;
+    height: 100%;
+    float: left;
+    background-color: $bg;
+}
+
+// Mixin cho wrapper
+@mixin grid-wrapper($height: $gridwrapper-height) {
+    overflow: auto;
+    position: relative;
+    height: $height;
+}

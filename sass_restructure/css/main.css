@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+}
+
+.gridwrapper {
+  overflow: auto;
+  position: relative;
+  height: 250px;
+}
+.gridwrapper.active {
+  height: auto;
+}
+
+.gridcontent {
+  width: 8.33%;
+  margin: 0;
+  border-right: 1px solid grey;
+  height: 100%;
+  float: left;
+  background-color: #f1f1f1;
+}
+.gridcontent.full-width {
+  width: 100%;
+  border-right-color: transparent;
+}
+.gridcontent.quarter {
+  width: 25%;
+  padding-top: 15px;
+}
+.gridcontent.no-border {
+  border: none;
+}
+.gridcontent.bg-white {
+  background-color: #ffffff;
+}
+.gridcontent.bg-blue {
+  background-color: #33b5e5;
+}
+.gridcontent.bg-purple {
+  background-color: #9933cc;
+}
+.gridcontent.bg-teal {
+  background-color: #0099cc;
+}
+
+/*# sourceMappingURL=main.css.map */

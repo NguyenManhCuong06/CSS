@@ -1,0 +1,8 @@
+// layout/_grid-wrapper.scss
+.gridwrapper {
+    @include grid-wrapper();
+
+    &.active {
+        height: auto;
+    }
+}
