@@ -1,0 +1,8 @@
+// components/_button.scss
+.btn {
+    @include btn-base($primary-color, $text-white);
+
+    &:hover {
+        background-color: $primary-hover;
+    }
+}

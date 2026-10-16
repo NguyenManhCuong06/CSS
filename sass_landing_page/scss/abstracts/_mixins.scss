@@ -1,0 +1,32 @@
+// abstracts/_mixins.scss
+// Mixin cho nút bấm
+@mixin btn-base($bg, $color) {
+    background-color: $bg;
+    color: $color;
+    padding: $btn-padding;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: $transition-fast;
+}
+
+// Mixin cho hiệu ứng hover scale của card
+@mixin card-hover {
+    transition: $transition-fast;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+// Mixin cho link hover
+@mixin link-hover($color) {
+    text-decoration: none;
+    color: $color;
+    padding: 10px;
+    transition: $transition-fast;
+
+    &:hover {
+        color: $primary-hover;
+    }
+}

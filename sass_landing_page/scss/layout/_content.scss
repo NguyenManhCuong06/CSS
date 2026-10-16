@@ -1,0 +1,11 @@
+// layout/_content.scss
+.content {
+    text-align: center;
+    padding: $content-padding;
+
+    h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: $text-dark;
+    }
+}

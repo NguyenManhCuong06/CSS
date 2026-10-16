@@ -1,0 +1,16 @@
+// layout/_footer.scss
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: $footer-bg;
+    color: $text-white;
+    text-align: center;
+
+    .footer-left,
+    .footer-right {
+        p {
+            margin: 5px 0;
+        }
+    }
+}

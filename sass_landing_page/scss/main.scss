@@ -1,0 +1,10 @@
+// main.scss
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "base/reset";
+@import "layout/header";
+@import "layout/navbar";
+@import "layout/content";
+@import "components/card";
+@import "components/button";
+@import "layout/footer";

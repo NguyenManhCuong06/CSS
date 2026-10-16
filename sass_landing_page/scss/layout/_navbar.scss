@@ -1,0 +1,25 @@
+// layout/_navbar.scss
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: $text-dark;
+    padding: $navbar-padding;
+    text-align: center;
+    z-index: 1000;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+
+        li {
+            margin: 0 15px;
+
+            a {
+                @include link-hover($text-white);
+                font-size: 18px;
+            }
+        }
+    }
+}
